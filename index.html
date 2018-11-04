@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+
+<body ng-controller="firstCtrl">
+  <div>
+    <div class="sel">
+      <input type="button" value="{{day}}" ng-click="show=!show" class="inpSelect" ng-blur="blurClose()">
+      <ul class="chat-info" ng-show="show" ng-click="show=false">
+        <li ng-repeat="option in optionsArray" ng-click="currentOption(option)">{{option}}</li>
+      </ul>
+    </div>
+   
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script> -->
+  <script src="./angular1.js"></script>
+  <script src="./angular.js"></script>
+</body>
+
+</html>

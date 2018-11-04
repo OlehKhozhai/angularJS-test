@@ -1,0 +1,75 @@
+input.b-0 {
+    border: 0;
+}
+
+.sel{
+    position: relative;}
+
+.inpSelect{
+    width: 12%;
+    background-color: transparent;
+    border: 1px solid #afadad;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.showOptions{
+  
+}
+
+.chat-info li:hover{
+    background-color: #b2ddb5;
+    border: 1px solid #afadad;
+    border-radius: 5px;
+}
+
+select {
+    width: 15%;
+    background-color: rgb(40, 197, 93);
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+
+.chat-info {
+    max-height: 200px;
+    overflow-x: auto;
+    width: 10%;
+    background-color: #9af1a1;
+    border: 1px solid #afadad;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    list-style: none;
+    margin-top: 0px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+}
+.chat-info::-webkit-scrollbar-track
+{
+	/* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+	border-radius: 30px;
+	background-color: inherit;
+}
+
+.chat-info::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: inherit;
+}
+
+.chat-info::-webkit-scrollbar-thumb
+{
+	border-radius: 30px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+.chat-info li {
+    position: relative;
+}
