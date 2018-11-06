@@ -14,14 +14,22 @@
     <div class="sel">
       <input type="button" value="{{dayDefault}}" ng-click="show=!show" class="inpSelect" ng-blur="blurClose()" ng-style="inValid?{'border-color':'red'}: null">
       <ul class="chat-info" ng-show="show" ng-click="show=false">
-        <li ng-repeat="day in dayArray" ng-click="setValue(day, 'day', $index)">{{day}}</li>
+        <li ng-repeat="day in dayArray" ng-click="setValue(day, 'day', $index+1)">{{day}}</li>
       </ul>
     </div>
 
     <div class="sel">
       <input type="button" value="{{monthDefault}}" ng-click="showw=!showw" class="inpSelect" ng-blur="blurClosew()">
       <ul class="chat-info" ng-show="showw" ng-click="showw=false">
-         <li ng-repeat="month in monthArray" ng-click="setValue(month, 'month', $index)">{{month}}</li>
+         <li ng-repeat="monthF in monthArray.first" ng-click="setValue(monthF, 'month', $index+1)">{{monthF}}</li>
+         <li ng-repeat="monthS in monthArray.second" ng-click="setValue(monthS, 'month', $index+1)">{{monthS}}</li>
+      </ul>
+    </div>
+
+    <div class="sel">
+      <input type="button" value="{{yearDefault}}" ng-click="showww=!showww" class="inpSelect" ng-blur="blurClosew()">
+      <ul class="chat-info" ng-show="showww" ng-click="showww=false">
+         <li ng-repeat="year in yearArray" ng-click="setValue(year, 'year', $index+1)">{{year}}</li>
       </ul>
     </div>
  </div>
