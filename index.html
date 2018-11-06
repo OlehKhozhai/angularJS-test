@@ -10,13 +10,22 @@
 </head>
 
 <body ng-controller="firstCtrl">
-  <div>
+ <div class="content">
     <div class="sel">
-      <input type="button" value="{{day}}" ng-click="show=!show" class="inpSelect" ng-blur="blurClose()">
+      <input type="button" value="{{dayDefault}}" ng-click="show=!show" class="inpSelect" ng-blur="blurClose()" ng-style="inValid?{'border-color':'red'}: null">
       <ul class="chat-info" ng-show="show" ng-click="show=false">
-        <li ng-repeat="option in optionsArray" ng-click="currentOption(option)">{{option}}</li>
+        <li ng-repeat="day in dayArray" ng-click="setValue(day, 'day', $index)">{{day}}</li>
       </ul>
     </div>
+
+    <div class="sel">
+      <input type="button" value="{{monthDefault}}" ng-click="showw=!showw" class="inpSelect" ng-blur="blurClosew()">
+      <ul class="chat-info" ng-show="showw" ng-click="showw=false">
+         <li ng-repeat="month in monthArray" ng-click="setValue(month, 'month', $index)">{{month}}</li>
+      </ul>
+    </div>
+ </div>
+   
    
 
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script> -->

@@ -2,10 +2,12 @@ input.b-0 {
     border: 0;
 }
 
-.sel{
-    position: relative;}
+.sel {
+    position: relative;
+    width: 100%;
+}
 
-.inpSelect{
+.inpSelect {
     width: 12%;
     background-color: transparent;
     border: 1px solid #afadad;
@@ -14,11 +16,9 @@ input.b-0 {
     cursor: pointer;
 }
 
-.showOptions{
-  
-}
+.showOptions {}
 
-.chat-info li:hover{
+.chat-info li:hover {
     background-color: #b2ddb5;
     border: 1px solid #afadad;
     border-radius: 5px;
@@ -29,9 +29,7 @@ select {
     background-color: rgb(40, 197, 93);
     cursor: pointer;
     border-radius: 5px;
-
 }
-
 
 .chat-info {
     max-height: 200px;
@@ -50,26 +48,28 @@ select {
     z-index: 100;
     text-align: center;
 }
-.chat-info::-webkit-scrollbar-track
-{
-	/* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
-	border-radius: 30px;
-	background-color: inherit;
+
+.chat-info::-webkit-scrollbar-track {
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+    border-radius: 30px;
+    background-color: inherit;
 }
 
-.chat-info::-webkit-scrollbar
-{
-	width: 6px;
-	background-color: inherit;
+.chat-info::-webkit-scrollbar {
+    width: 6px;
+    background-color: inherit;
 }
 
-.chat-info::-webkit-scrollbar-thumb
-{
-	border-radius: 30px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #555;
+.chat-info::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #555;
 }
 
 .chat-info li {
     position: relative;
+}
+
+.content {
+    display: flex;
 }
