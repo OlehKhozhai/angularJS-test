@@ -16,7 +16,7 @@ app.controller('firstCtrl', function ($scope, $timeout) {
   };
 
   $scope.yearArray = [];
-  for (let i = 2008; i >= 1940; i--) {
+  for (let i = 2009; i >= 1940; i--) {
     $scope.yearArray.push(i)
   };
 
@@ -45,6 +45,7 @@ app.controller('firstCtrl', function ($scope, $timeout) {
       $scope.dayDefault = value
       if (($scope.yearDefault % 4 !== 0) && $scope.monthDefault === 'february' && $scope.dayDefault > 28 && $scope.yearDefault !== 'Year' ||
         ($scope.yearDefault % 4 === 0) && $scope.monthDefault === 'february' && $scope.dayDefault > 29 && $scope.yearDefault !== 'Year' ||
+        $scope.monthDefault === 'february' && $scope.dayDefault > 29 && $scope.yearDefault === 'Year' ||
         $scope.monthArray.first.indexOf($scope.monthDefault) % 2 !== 0 && $scope.monthArray.second.indexOf($scope.monthDefault) % 2 !== 0 &&
         ($scope.dayDefault > 30) && $scope.yearDefault !== 'Year') {
         $scope.inValid = true;
