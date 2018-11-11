@@ -8,7 +8,7 @@ app.controller('firstCtrl', function ($scope, $timeout) {
     first: ['january', 'february', 'march', 'april', 'may', 'juli', 'julay'],
     second: ['august', 'september', 'october', 'november', 'december']
   };
-  console.log($scope.monthArray)
+  console.log($scope.monthArray.first[0])
   $scope.dayArray = [];
 
   for (let i = 1; i <= 31; i++) {
