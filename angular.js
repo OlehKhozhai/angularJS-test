@@ -129,35 +129,72 @@ app.controller('firstCtrl', function ($scope, $timeout, $q) {
     },
   ]
 
-  $scope.i = function (files) {
-    var deferred = $q.defer();
-    var promisee = deferred.promise;
-    promisee.then(() => {
-      files.forEach(good => {
-        $timeout(function () {
-           good.id = 9
-        }, 2000)
-
-       
-      })
-    })
- console.log('goodssssss', files)
-    deferred.resolve(files);
-    return deferred.promise;
+  $scope.apiRequest = function (good) {
+    return new Promise((resolve, rej) => {
+      setTimeout(()=> {
+          if (good.id === 2) {
+            good.id = 111;
+          } else {
+            good.id = 9            
+          }
+          
+          resolve(good);
+      }, 5000);
+  })
   }
 
-  $scope.sendPost = function (files) {
-    return $scope.i(files).then(res => {
-      console.log('rerssresresresres', res)
-
-      return $http.post(WP.SHOP_API_DOMAIN + 'api/import/' + $shop.$my().id, {
-          data: data,
-          id:id
-        })
-        .catch(function (err) {
-          err && $log.warn(err);
-        });
-    })
+  $scope.sendPost = function (goods) {
+    var promises = [];
+  
+    goods.forEach(good => {
+       promises.push($scope.apiRequest(good));
+    });
+    
+    Promise.all(promises).then(res => {
+     console.log('Response end', res)
+   });
   }
 
 });
+
+// let files = [{
+//   id: 1,
+//   name: 'Oleh'
+// },
+// {
+//   id: 2,
+//   name: 'pppp'
+// },
+// {
+//   id: 3,
+//   name: 'Olll'
+// }
+// ]
+
+// function apiRequest(good) {
+// return new Promise((resolve, rej) => {
+//     setTimeout(()=> {
+//         if (good.id === 2) {
+//           good.id = 111;
+//         } else {
+//           good.id = 9            
+//         }
+        
+//         resolve(good);
+//     }, 5000);
+// })
+// }
+
+// function sendPost(goods) {
+//   var promises = [];
+  
+//  goods.forEach(good => {
+//     promises.push(apiRequest(good));
+//  });
+ 
+//  Promise.all(promises).then(res => {
+//   console.log('Response end', res)
+// });
+// }
+
+// sendPost(files);
