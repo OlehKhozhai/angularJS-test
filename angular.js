@@ -44,9 +44,9 @@ app.controller('firstCtrl', function ($scope, $timeout) {
     if (text === 'day') {
       $scope.dayDefault = value
       if (($scope.yearDefault % 4 !== 0) && $scope.monthDefault === 'february' && $scope.dayDefault > 28 && $scope.yearDefault !== 'Year' ||
-        ($scope.yearDefault % 4 === 0) && $scope.monthDefault === 'february' && $scope.dayDefault > 29 && $scope.yearDefault !== 'Year' ||
+          ($scope.yearDefault % 4 === 0) && $scope.monthDefault === 'february' && $scope.dayDefault > 29 && $scope.yearDefault !== 'Year' ||
         $scope.monthArray.first.indexOf($scope.monthDefault) % 2 !== 0 && $scope.monthArray.second.indexOf($scope.monthDefault) % 2 !== 0 &&
-        ($scope.dayDefault > 30) && $scope.yearDefault !== 'Year') {
+        ($scope.dayDefault > 30) && $scope.yearDefault == 'Year') {
         $scope.inValid = true;
       } else {
         $scope.inValid = false;
