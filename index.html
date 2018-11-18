@@ -9,7 +9,49 @@
   <title>Document</title>
 </head>
 
-<body ng-controller="firstCtrl">
+<body ng-controller="FileImportController">
+
+
+  <div data-ng-repeat="section in options">
+    <h4>{{section.title }}</h4>
+
+    <div class="radio" data-ng-show="section.type == 'radio'" data-ng-repeat="option in section.values">
+
+      <input id="{{'optionsRadios' + section.id}}" type="radio" name="{{'optionsRadios' + section.id}}" data-ng-value="option.action"
+        data-ng-model="section.value">
+
+      <label for="{{'optionsRadios' + section.id}}"> {{option.text }} </label>
+{{section.value}}
+{{option.action}}
+<!-- {{option.val}} -->
+
+    </div>
+
+
+
+
+    <div class="checkbox" data-ng-show="section.type == 'checkbox'" data-ng-repeat="option in section.values">
+      <input id="{{option}}" type="checkbox" value="" data-ng-model="option.val" data-ng-disabled="option.disabled"
+        class="color-for-checkbox">
+      <label for="{{option}}" class="pt-3px">
+        {{option.text }}
+      </label>
+      <span data-ng-show="option.disabled" class="red">*</span>
+    </div>
+  </div>
+
+  </div>
+
+  </div>
+
+
+  <!-- ======================================================================================================================================== -->
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="./angular.js"></script>
+<!-- <body ng-controller="firstCtrl">
  <div class="content">
     <div class="sel">
       <input type="button" value="{{dayDefault}}" ng-click="show=!show" class="inpSelect" ng-blur="blurClose()" ng-style="inValid?{'border-color':'red'}: null">
@@ -38,243 +80,8 @@
    <button ng-click="sendPost(files); go=!go">Send files</button>
 <div ng-show= "go">{{files.id}}cxc</div>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script> -->
-  <!-- <script src="./angular1.js"></script> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <script src="./angular.js"></script>
-</body>
+<!-- <script src="./angular1.js"></script> -->
+
+</body> -->
 
 </html>
-
-
-
-
-
-<div class="col-sm-12 three-side-border">
-  <p></p>
-  <input type="file"
-         data-importer="file.onParsed"
-         id="import-form-control"
-         class="form-control" multiple>
-
-  <button id="btn-form-control"
-          class="form-control"
-          data-ng-click="chosenFile()"
-          ng-disabled="emptyField"
-          ng-style="emptyField ? {'opacity' : '0.5','color' : '#a4a4a4', 'border' : '1px solid #a4a4a4', 'cursor' : 'default', 'background-color' : '#e4e4e4'} : null"
-  >
-    {{'Завантажити файл' | translate}}
-  </button>
-  <p></p>
-
-  <uib-accordion close-others="oneAtATime" class="text-left clear-bs-border-and-bg"
-                 data-ng-if="file.parsedFiles.length == 0">
-    <div data-uib-accordion-group data-heading="none" class="panel-default" is-open="true">
-      <uib-accordion-heading>
-        <span class="glyphicon glyphicon-cog"></span> <span data-translate="SETTING"></span>
-      </uib-accordion-heading>
-
-      <div class="row">
-        <div class="col-sm-6 col-xs-12">
-          <div class="alert alert-info" role="alert">…</div>
-        </div>
-
-        <div class="col-sm-6 col-xs-12">
-          <div class="text-left">
-            <div data-ng-repeat="section in file.options">
-              <h4>{{section.title | translate}}</h4>
-
-              <!-- <div class="radio" data-ng-show="section.type == 'radio'"
-                   data-ng-repeat="option in section.values track by $index">
-                <input id="{{'optionsRadios' + section.id}}" type="radio" name="{{'optionsRadios' + section.id}}"
-                       data-ng-value="option.action" data-ng-model="$parent.section.value" class="color-for-checkbox">
-                <label for="{{'optionsRadios' + section.id}}">
-                  {{option.text | translate}}
-                </label>
-              </div> -->
-<!-- 
-              <div class="radio" data-ng-show="section.type == 'radio'" data-ng-repeat="option in section.values">
-              
-                   <input id="{{'optionsRadios' + section.id}}" type="radio"
-                    data-ng-value="option.action" data-ng-model="option.val" class="color-for-checkbox" data-ng-click="count = count+1">
-
-                     <label for="{{'optionsRadios' + section.id}}"> {{option.text | translate}} </label>
-                     {{option.val}}
-                     {{count}}
-                     {{'optionsRadios' + section.id}}
-              </div> -->
-
-
-            
-
-
-
-              <div class="checkbox" data-ng-show="section.type == 'checkbox'" data-ng-repeat="option in section.values">
-                <input id="{{option}}" type="checkbox" value="" data-ng-model="option.val"
-                       data-ng-disabled="option.disabled" class="color-for-checkbox">
-                <label for="{{option}}" class="pt-3px">
-                  {{option.text | translate}}
-                </label>
-                <span data-ng-show="option.disabled" class="red">*</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </uib-accordion>
-<div class="row">
-  <div class="col-sm-12 col-lg-12 col-md-12 col-xs-12">
-    <div class="files-conteiner w-80vw" data-ng-if="file.parsedFiles.length > 0">
-
-    <uib-accordion close-others="oneAtATime" class="text-left clear-bs-border-and-bg">
-      <div data-uib-accordion-group data-heading="none" class="panel-default "
-           data-ng-repeat="item in file.parsedFiles track by $index">
-        <uib-accordion-heading>
-          <span>{{item.name | translate}}</span>
-        </uib-accordion-heading>
-
-        <div class="pull-right mr_-15 pb-9px">
-          <div class="btn-group mr-7px" data-uib-dropdown is-open="status.isopen" auto-close="outsideClick">
-            <button id="single-button" type="button" class="btn btn-sm button-import font-family-tahoma" data-uib-dropdown-toggle
-                    data-ng-disabled="disabled">
-              <!-- <span class="glyphicon glyphicon-cog"></span> -->
-              <span data-translate="SETTING"></span>
-              <span class="caret"></span>
-            </button>
-            <!-- ======================================================================================================================================== -->
-            <ul class="dropdown-menu fix-bs-dd-menu font-family-tahoma m-0" data-uib-dropdown-menu role="menu" aria-labelledby="single-button">
-              <li role="menuitem">
-                <div class="checkbox setting-select-hover setting-select-import" data-ng-repeat="option in item.fields">
-                  <input id="{{option}}" type="checkbox" value=""  data-ng-model="option.val" class="color-for-checkbox font14" data-ng-disabled="option.disabled">
-                  <label for="{{option}}" class="font-family-tahoma">
-                    {{option.text | translate}}
-                  </label>
-                </div>
-              </li>
-              <!--<li class="divider"></li>-->
-              <!--<li role="menuitem"><a href="#">Separated link</a></li>-->
-            </ul>
-          </div>
-            <!-- ======================================================================================================================================== -->
-
-          <button type="button" class="btn btn-sm button-import font-family-tahoma" data-ng-click="file.importCurrentFile(item)">
-            {{'Импортировать' | translate}}
-          </button>
-        </div>
-        <div class="clearfix"></div>
-
-        <div class="file table-responsive row grey-border-top">
-          <table class="table table-condensed table-hover">
-            <thead>
-            <tr>
-              <th data-ng-repeat="hitem in item.fields track by $index"
-                  data-ng-if="hitem.val">
-                <span data-ng-bind="hitem.text" class="nowrap-text"></span>
-                <select data-ng-model="hitem.alias" data-ng-options="c as c for c in item.headings"></select>
-                <!--<span data-ng-if="hitem.alias" class="nowrap-text">{{'('+ hitem.alias + ')'}}</span>-->
-              </th>
-            </tr>
-            </thead>
-
-            <tbody>
-            <tr class="" data-ng-repeat="row in item.rows track by $index">
-              <td data-ng-repeat="hitem in item.fields track by $index"
-                  data-ng-bind="row[hitem.alias]"
-                  data-ng-if="hitem.val"></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </uib-accordion>
-            <!-- ======================================================================================================================================== -->
-
-    <div class="pull-right">
-      <p></p>
-      <button type="button" class="btn btn-sm button-import font-family-tahoma" data-ng-click="file.importAllFiles()">
-        {{'Импортировать все' | translate }}
-      </button>
-      <p></p>
-    </div>
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</div>
-  
-            <!-- ======================================================================================================================================== -->
-
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="danger import-result-item" data-ng-repeat="row in file.importResult.error">
-        <div class="img-wrap">
-          <img data-ng-show="row.item.pictures.length > 0"
-               data-ng-src="{{WP.REPOSITORY_DOMAIN+row.item.pictures[row.item.coverPicture]}}" alt="" width="50"
-               height="50">
-          <img data-ng-show="row.item.pictures.length === 0"
-               data-ng-src="{{WP.REPOSITORY_DOMAIN+'user/u0/images/shop/Shop_default_image.png'}}" alt="" width="50"
-               height="50">
-        </div>
-
-        <div class="item-spec-container">
-          <div class="item-spec text-left pull-left">
-            <h5 data-ng-bind="row.item.title" class="item-title"></h5>
-            <span>{{'цена' | translate}} - </span> <strong data-ng-bind="row.item.price | price"></strong> <span
-            data-ng-bind="row.item.currency"></span>
-          </div>
-          <div class="pull-right" data-ng-bind="row.reason">
-            {{'Товар добавлен' | translate}}
-          </div>
-          <div class="clearfix"></div>
-        </div>
-
-        <div class="item-controls">
-          <span class="ggd-link font17" data-ng-click="file.createItem(row.item)"> <span
-            class="glyphicon glyphicon-edit"></span></span>
-        </div>
-      </div>
-
-      <div class="success import-result-item" data-ng-repeat="row in file.importResult.success">
-        <div class="img-wrap">
-          <img data-ng-show="row.item.pictures.length > 0"
-               data-ng-src="{{WP.REPOSITORY_DOMAIN+row.item.pictures[row.item.coverPicture]}}" alt="" width="50"
-               height="50">
-          <img data-ng-show="row.item.pictures.length === 0"
-               data-ng-src="{{WP.REPOSITORY_DOMAIN+'user/u0/images/shop/Shop_default_image.png'}}" alt="" width="50"
-               height="50">
-        </div>
-
-        <div class="item-spec-container">
-          <div class="item-spec text-left pull-left">
-            <h5 data-ng-bind="row.item.title" class="item-title"></h5>
-            <span>{{'цена' | translate}} - </span> <strong data-ng-bind="row.item.price | price"></strong> <span
-            data-ng-bind="row.item.currency"></span>
-          </div>
-          <div class="pull-right" data-ng-bind="row.reason">
-
-          </div>
-          <div class="clearfix"></div>
-        </div>
-
-        <div class="item-controls">
-          <span class="ggd-link font17" data-ng-click="file.removeItem(this)"> <span
-            class="glyphicon glyphicon-trash"></span></span>
-          <span class="ggd-link font17" data-ng-click="file.viewItem(row.item)"> <span
-            class="glyphicon glyphicon-eye-open"></span></span>
-          <span class="ggd-link font17" data-ng-click="file.editItem(row.item)"> <span
-            class="glyphicon glyphicon-edit"></span></span>
-        </div>
-      </div>
-    </div>
-    <p></p>
-  </div>
-</div>
-
-
-<div ng-repeat='policy in policies'>
-  <div ng-repeat='driver in policy.drivers'>
-    Gender : M
-    <input type='radio' name='driverGender{{$index}}{{$parent.$index}}0' value='M' ng-model='driver.gender' />F
-    <input type='radio' ng-model='driver.gender' name='driverGender{{$index}}{{$parent.$index}}1' value='F' />
-  </div>
-</div>
