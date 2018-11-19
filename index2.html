@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+
+<body ng-controller="FileImportController as file">
+
+
+
+
+  <div data-ng-repeat="section in file.options">
+    <h4>{{section.title}}</h4>
+    {{section.value}}
+    <div class="radio" data-ng-show="section.type == 'radio'" data-ng-repeat="option in section.values track by $index">
+      <input id="{{'optionsRadios' + section.id}}" type="radio" name="{{'optionsRadios' + section.id}}" data-ng-value="option.action"
+        data-ng-model="$parent.section.value" class="color-for-checkbox">
+      <label for="{{'optionsRadios' + section.id}}">
+        {{option.text }}
+      </label>
+    </div>
+
+    <!-- <div class="radio" data-ng-show="section.type == 'radio'" data-ng-repeat="option in section.values">
+
+      <input id="{{'optionsRadios' + section.id}}" type="radio" data-ng-value="option.action" data-ng-model="option.val"
+        class="color-for-checkbox" data-ng-click="count = count+1">
+      <label for="{{'optionsRadios' + section.id}}"> {{option.text | translate}} </label>
+      {{option.val}}
+      {{count}}
+      {{'optionsRadios' + section.id}}
+    </div> -->
+
+
+
+
+
+
+    <div class="checkbox" data-ng-show="section.type == 'checkbox'" data-ng-repeat="option in section.values">
+      <input id="{{option}}" type="checkbox" value="" data-ng-model="option.val" data-ng-disabled="option.disabled"
+        class="color-for-checkbox">
+      <label for="{{option}}" class="pt-3px">
+        {{option.text}}
+      </label>
+      <span data-ng-show="option.disabled" class="red">*</span>
+    </div>
+  </div>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="./file.js"></script>
