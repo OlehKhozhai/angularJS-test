@@ -16,8 +16,8 @@
 
   <div data-ng-repeat="section in file.options">
     <h4>{{section.title}}</h4>
-    {{section.value}}
-    <div class="radio" data-ng-show="section.type == 'radio'" data-ng-repeat="option in section.values track by $index">
+    {{section.title}}
+    <div class="radio" data-ng-show="section.type == 'radio'" data-ng-repeat="option in section.values">
       <input id="{{'optionsRadios' + section.id}}" type="radio" name="{{'optionsRadios' + section.id}}" data-ng-value="option.action"
         data-ng-model="$parent.section.value" class="color-for-checkbox">
       <label for="{{'optionsRadios' + section.id}}">
