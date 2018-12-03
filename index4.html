@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="plunker">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+
+<body ng-controller="MainCtrl">
+  <ul>
+    <li ng-repeat="i in items" style="width: 100%; line-height: 30px;">
+      {{i}} click me to scroll to me!
+    </li>
+  </ul>
+  <scroll-on-click></scroll-on-click>
+  <script src="./angular1.js"></script>
+  <script src="./angular4.js"></script>
+</body>
+
+</html>

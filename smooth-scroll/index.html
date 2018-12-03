@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Example - example-anchor-scroll-offset-production</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+
+    <script src="./../angular1.js"></script>
+    <script src="main.js"></script>
+
+
+
+</head>
+
+<body ng-app="anchorScrollOffsetExample" ng-controller="headerCtrl">
+    <div class="fixed-header">
+        <ul>
+            <li><a href="" ng-click="gotoAnchor(1)">11</a></li>
+            <li><a href="" ng-click="gotoAnchor(2)">22</a></li>
+            <li><a href="" ng-click="gotoAnchor(3)">33</a></li>
+            <li><a href="" ng-click="gotoAnchor(4)">44</a></li>
+            <li><a href="" ng-click="gotoAnchor(5)">55</a></li>
+            <li><a href="" ng-click="gotoAnchor(6)">66</a></li>
+        </ul>
+    </div>
+    <div id="anchor1" class="anchor">
+        Anchor {{x}} of 1
+    </div>
+    <div id="anchor2" class="anchor">
+        Anchor {{x}} of 2
+    </div>
+    <div id="anchor3" class="anchor">
+        Anchor {{x}} of 3
+    </div>
+    <div id="anchor4" class="anchor">
+        Anchor {{x}} of 4
+    </div>
+    <div id="anchor5" class="anchor">
+        Anchor {{x}} of 5
+    </div>
+    <div id="anchor6" class="anchor">
+        Anchor {{x}} of 6
+    </div>
+
+
+</body>
+
+</html>

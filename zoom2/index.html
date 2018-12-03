@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="imageZoomApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>AngularJS Image Zoom Demo</title>
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./main.css">
+  <script src="./../angular1.js"></script>
+</head>
+
+<body>
+
+  <div class="container-fluid" ng-controller="ImageZoomController as zoom">
+
+    <zoom mark-height="100" mark-width="100" src="{{zoom.src}}" zoom-lvl="{{zoom.zoomLvl}}"></zoom>
+    <aside>
+      <div>
+
+        <form class="form-horizontal">
+
+          <fieldset class="control-group">
+            <label for="selectImage" class="control-label">Select Image</label>
+            <div class="controls">
+              <select ng-model="zoom.src" id="selectImage" ng-options="image.url as image.name for image in zoom.images">
+                <option value="">Select Image</option>
+              </select>
+            </div>
+            <label for="inputZoomLvl" class="control-label">Zoom Level</label>
+            <div class="controls">
+              <input type="range" ng-model="zoom.zoomLvl" id="inputZoomLvl" min="2" max="5" step="1" value="4">
+            </div>
+          </fieldset>
+
+          <fieldset class="control-group">
+            <label for="inputName" class="control-label">Name</label>
+            <div class="controls">
+              <input ng-model="zoom.name" id="inputName" placeholder="Enter Image Name" class="input-small" required>
+            </div>
+            <label for="inputURL" class="control-label">URL</label>
+            <div class="controls">
+              <input ng-model="zoom.url" type="url" id="imageURL" placeholder="Enter Image URL" class="input-small"
+                required>
+            </div>
+            <div class="btn">
+              <button ng-click="zoom.addImage()">Add</button>
+            </div>
+          </fieldset>
+
+        </form>
+
+      </div>
+    </aside>
+  </div>
+  <h1>AngularJS Image Zoom Demo</h1>
+  <div class="angular-script-ads">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- angular_demo -->
+    <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-2783044520727903"
+      data-ad-slot="5597264792"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+  <script src=./app.js"> </script> </body>

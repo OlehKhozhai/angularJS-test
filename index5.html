@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+
+<body ng-app="anchorScrollOffsetExample">
+	<div class="fixed-header" ng-controller="headerCtrl">
+		<nav class="grey-border-bottom help-center-shop-set-nav">
+			<p data-translate="HELP_CENTER.SHOP_SET.SPAN29" class="help-center-shop-set-p"></p>
+			<ol class="help-center-shop-set orange ">
+				<li><a href="#shop-title"> data-translate="HELP_CENTER.SHOP_SET.STRONG4"</a></li>
+				<li><a href="#shop-description"> data-translate="HELP_CENTER.SHOP_SET.STRONG5"</a></li>
+				<li><a href="#shop-logo">data-translate="HELP_CENTER.SHOP_SET.STRONG7"</a></li>
+				<li><a href="#shop-country">data-translate="HELP_CENTER.SHOP_SET.STRONG8"</a></li>
+				<li><a href="#shop-city"> data-translate="HELP_CENTER.SHOP_SET.STRONG9"</a></li>
+				<li><a href="#shop-address"> data-translate="HELP_CENTER.SHOP_SET.STRONG10"</a></li>
+				<li><a href="#shop-mail"> data-translate="HELP_CENTER.SHOP_SET.STRONG11"</a></li>
+				<li><a href="#shop-phone"> data-translate="HELP_CENTER.SHOP_SET.STRONG13"</a></li>
+				<li><a href="#shop-url"> data-translate="HELP_CENTER.SHOP_SET.STRONG15"</a></li>
+				<li><a href="#shop-another-address"> data-translate="HELP_CENTER.SHOP_SET.STRONG16"</a></li>
+			</ol>
+		</nav>
+		<div>
+
+		</div>
+		<p class="help-center-margin">
+			<span data-translate="HELP_CENTER.SHOP_SET.SPAN1"></span>
+			<strong class="create-center-margin">data-translate="HELP_CENTER.SHOP_SET.STRONG1"</strong>
+			<span data-translate="HELP_CENTER.SHOP_SET.SPAN2"></span>
+			<strong class="create-center-margin">data-translate="HELP_CENTER.SHOP_SET.STRONG2"</strong>
+			<span> data-translate="HELP_CENTER.SHOP_SET.SPAN3"</span>
+			<strong class="create-center-margin"> data-translate="HELP_CENTER.SHOP_SET.STRONG3"</strong><br />
+			<span data-translate="HELP_CENTER.SHOP_SET.SPAN4" </span> </p> <ol class="help-center-margin scrolling-box">
+				<!-- SHOP -->
+				<div class="shadow1" id="shop-title"></div>
+				<li>
+					<strong class="create-center-margin">1.</strong>
+					<strong"> data-translate="HELP_CENTER.SHOP_SET.STRONG4</strong>
+						<i class="fa fa-question set-question-icon" data-toggle="modal" data-target="#changes"></i><br />
+						<span data-translate="HELP_CENTER.SHOP_SET.SPAN5"></span><br />
+						<span data-translate="HELP_CENTER.SHOP_SET.SPAN6"></span>
+				</li>
+				<div class="panel-group panel-group-set" id="accordion">
+					<div class="shop-set-panel panel-set hc-list-item">
+						<div class="panel-heading-set">
+							<h4 class="panel-title shop-set d-flex" data-toggle="collapse" data-parent="#accordion" href="#collapseTrue"
+							 ng-click="open = !open">
+								<span class="glyphicon glyphicon-ok set-icon"></span>
+								<span class="uppercase set-text" data-translate="HELP_CENTER.SHOP_SET.SPAN7"></span>
+							</h4>
+							<i class="pull-right glyphicon set-icon-chevron" data-ng-class="open ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'">
+							</i>
+						</div>
+						<div id="collapseTrue" class="panel-collapse collapse">
+							<div class="panel-body panel-body-set">
+								<ul class="dashed inner-set-list">
+									<li data-translate="HELP_CENTER.SHOP_SET.LI1"></li>
+									<li data-translate="HELP_CENTER.SHOP_SET.LI2"></li>
+									<li data-translate="HELP_CENTER.SHOP_SET.LI3"></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="shop-set-panel-botton panel-set hc-list-item">
+						<div class="panel-heading-set panel-heading-set-red">
+							<h4 class="panel-title shop-set d-flex" data-toggle="collapse" data-parent="#accordion" href="#collapseFalse"
+							 ng-click="op1 = !op1">
+								<span class="glyphicon glyphicon-remove set-icon"></span>
+								<span class="uppercase set-text" data-translate="HELP_CENTER.SHOP_SET.SPAN8"></span>
+							</h4>
+							<i class="pull-right glyphicon set-icon-chevron" data-ng-class="op1 ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'">
+							</i>
+						</div>
+						<div id="collapseFalse" class="panel-collapse collapse">
+							<div class="panel-body panel-body-set">
+								<ul class="dashed inner-set-list inner-set-list-red">
+									<li data-translate="HELP_CENTER.SHOP_SET.LI4"></li>
+									<li data-translate="HELP_CENTER.SHOP_SET.LI5"></li>
+									<li data-translate="HELP_CENTER.SHOP_SET.LI6"></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal fade bd-example-modal-lg modal-set-padding" id="changes" tabindex="-1" role="dialog"
+				 aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog set-modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header set-modal-header">
+								<strong data-translate="HELP_CENTER.SHOP_SET.STRONG4"></strong>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body set-modal-body">
+							</div>
+							<div class="modal-footer set-modal-footer">
+								<span data-translate="HELP_CENTER.SHOP_SET.STRONG19"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- DESCRIPTION -->
+				<div class="shadow1" id="shop-description"></div>
+
+				<li>
+					<strong class="create-center-margin">2.</strong>
+					<strong data-translate="HELP_CENTER.SHOP_SET.STRONG5"></strong>
+					<i class="fa fa-question set-question-icon" data-toggle="modal" data-target="#description"></i><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN9"></span><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN10"></span>
+					<strong data-translate="HELP_CENTER.SHOP_SET.STRONG6"></strong>
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN11"></span>
+				</li>
+				<div class="panel-group panel-group-set" id="accordion">
+					<div class="shop-set-panel panel-set hc-list-item">
+						<div class="panel-heading-set">
+							<h4 class="panel-title shop-set d-flex" data-toggle="collapse" data-parent="#accordion" href="#collapseTrue1"
+							 ng-click="op2 = !op2">
+								<span class="glyphicon glyphicon-ok set-icon"></span>
+								<span class="uppercase set-text" data-translate="HELP_CENTER.SHOP_SET.SPAN7"></span>
+							</h4>
+							<i class="pull-right glyphicon set-icon-chevron" data-ng-class="op2 ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'">
+							</i>
+						</div>
+						<div id="collapseTrue1" class="panel-collapse collapse">
+							<div class="panel-body panel-body-set">
+								<ul class="dashed inner-set-list">
+									<li data-translate="HELP_CENTER.SHOP_SET.LI7"></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="shop-set-panel-botton panel-set hc-list-item">
+						<div class="panel-heading-set panel-heading-set-red">
+							<h4 class="panel-title shop-set d-flex" data-toggle="collapse" data-parent="#accordion" href="#collapseFalse1"
+							 ng-click="op3 = !op3">
+								<span class="glyphicon glyphicon-remove set-icon"></span>
+								<span class="uppercase set-text" data-translate="HELP_CENTER.SHOP_SET.SPAN8"></span>
+							</h4>
+							<i class="pull-right glyphicon set-icon-chevron" data-ng-class="op3 ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'">
+							</i>
+						</div>
+						<div id="collapseFalse1" class="panel-collapse collapse">
+							<div class="panel-body panel-body-set">
+								<ul class="dashed inner-set-list inner-set-list-red">
+									<li data-translate="HELP_CENTER.SHOP_SET.LI8"></li>
+									<li data-translate="HELP_CENTER.SHOP_SET.LI9"></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade bd-example-modal-lg modal-set-padding" id="description" tabindex="-1" role="dialog"
+				 aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog set-modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header set-modal-header">
+								<strong data-translate="HELP_CENTER.SHOP_SET.STRONG5"></strong>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body set-modal-body">
+							</div>
+							<div class="modal-footer set-modal-footer">
+								<span data-translate="HELP_CENTER.SHOP_SET.STRONG19"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- LOGO -->
+				<li id="shop-logo">
+					<strong class="create-center-margin">3.</strong><strong data-translate="HELP_CENTER.SHOP_SET.STRONG7"></strong>
+					<i class="fa fa-question set-question-icon" data-toggle="modal" data-target="#logo"></i><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN12"></span><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN13"></span><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN14"></span>
+					<strong data-translate="HELP_CENTER.SHOP_SET.STRONG18"></strong>
+				</li>
+				<div class="panel-group panel-group-set" id="accordion">
+					<div class="shop-set-panel panel-set hc-list-item">
+						<div class="panel-heading-set">
+							<h4 class="panel-title shop-set d-flex" data-toggle="collapse" data-parent="#accordion" href="#collapseTrue4"
+							 ng-click="op4 = !op4">
+								<span class="glyphicon glyphicon-ok set-icon"></span>
+								<span class="uppercase set-text" data-translate="HELP_CENTER.SHOP_SET.SPAN7"></span>
+							</h4>
+							<i class="pull-right glyphicon set-icon-chevron" data-ng-class="op4 ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'">
+							</i>
+						</div>
+						<div id="collapseTrue4" class="panel-collapse collapse">
+							<div class="panel-body panel-body-set">
+								<ul class="dashed inner-set-list">
+									<div class="inner-set-logo">
+									</div>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="shop-set-panel-botton panel-set hc-list-item">
+						<div class="panel-heading-set panel-heading-set-red">
+							<h4 class="panel-title shop-set d-flex" data-toggle="collapse" data-parent="#accordion" href="#collapseFalse5"
+							 ng-click="op5 = !op5">
+								<span class="glyphicon glyphicon-remove set-icon"></span>
+								<span class="uppercase set-text" data-translate="HELP_CENTER.SHOP_SET.SPAN8"></span>
+							</h4>
+							<i class="pull-right glyphicon set-icon-chevron" data-ng-class="op5 ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'">
+							</i>
+						</div>
+						<div id="collapseFalse5" class="panel-collapse collapse">
+							<div class="panel-body panel-body-set">
+								<ul class="dashed inner-set-list inner-set-list-red">
+									<div class="inner-set-logo inner-set-logo-red">
+										<img src="../../../img/help-center/set-logo-bad.png" alt="set-logo">
+									</div>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade bd-example-modal-lg modal-set-padding" id="logo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+				 aria-hidden="true">
+					<div class="modal-dialog set-modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header set-modal-header">
+								<strong data-translate="HELP_CENTER.SHOP_SET.STRONG7"></strong>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body set-modal-body">
+								<a href="https://repository.googoodoo.com/user/u0/images/help-center/logo.png" target="_blank">
+									<img class="set-modal-pic" src="../../../img/help-center/logo.png" alt="logo">
+								</a>
+							</div>
+							<div class="modal-footer set-modal-footer">
+								<span data-translate="HELP_CENTER.SHOP_SET.STRONG19"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- COUNTRY -->
+				<li class="set-margin-bottom" id="shop-country">
+					<strong class="create-center-margin">4.</strong>
+					<strong data-translate="HELP_CENTER.SHOP_SET.STRONG8"></strong>
+					<i class="fa fa-question set-question-icon" data-toggle="modal" data-target="#country"></i><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN15"></span><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN16"></span>
+				</li>
+				<div class="modal fade bd-example-modal-lg modal-set-padding" id="country" tabindex="-1" role="dialog"
+				 aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog set-modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header set-modal-header">
+								<strong data-translate="HELP_CENTER.SHOP_SET.STRONG8"></strong>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body set-modal-body">
+								<a href="https://repository.googoodoo.com/user/u0/images/help-center/country.png" target="_blank">
+									<img class="set-modal-pic" src="../../../img/help-center/country.png" alt="country">
+								</a>
+							</div>
+							<div class="modal-footer set-modal-footer">
+								<span data-translate="HELP_CENTER.SHOP_SET.STRONG19"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- CITY -->
+				<li class="set-margin-bottom" id="shop-city">
+					<strong class="create-center-margin">5.</strong>
+					<strong data-translate="HELP_CENTER.SHOP_SET.STRONG9"></strong>
+					<i class="fa fa-question set-question-icon" data-toggle="modal" data-target="#city"></i><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN17"></span><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN18"></span>
+				</li>
+				<div class="modal fade bd-example-modal-lg modal-set-padding" id="city" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+				 aria-hidden="true">
+					<div class="modal-dialog set-modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header set-modal-header">
+								<strong data-translate="HELP_CENTER.SHOP_SET.STRONG9"></strong>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body set-modal-body">
+
+							</div>
+							<div class="modal-footer set-modal-footer">
+								<span data-translate="HELP_CENTER.SHOP_SET.STRONG19"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ADDRESS -->
+				<li id="shop-address">
+					<strong class="create-center-margin">6.</strong>
+					<strong data-translate="HELP_CENTER.SHOP_SET.STRONG10"></strong>
+					<i class="fa fa-question set-question-icon" data-toggle="modal" data-target="#shopAddres"></i><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN19"></span><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN20"></span>
+				</li>
+				<div class="panel-group panel-group-set" id="accordion">
+					<div class="shop-set-panel panel-set hc-list-item">
+						<div class="panel-heading-set">
+							<h4 class="panel-title shop-set d-flex" data-toggle="collapse" data-parent="#accordion" href="#collapseTrue6"
+							 ng-click="op6 = !op6">
+								<span class="glyphicon glyphicon-ok set-icon"></span>
+								<span class="uppercase set-text" data-translate="HELP_CENTER.SHOP_SET.SPAN7"></span>
+							</h4>
+							<i class="pull-right glyphicon set-icon-chevron" data-ng-class="op6 ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'">
+							</i>
+						</div>
+						<div id="collapseTrue6" class="panel-collapse collapse">
+							<div class="panel-body panel-body-set">
+								<ul class="dashed inner-set-list">
+									<li data-translate="HELP_CENTER.SHOP_SET.LI10"></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="shop-set-panel-botton panel-set hc-list-item">
+						<div class="panel-heading-set panel-heading-set-red">
+							<h4 class="panel-title shop-set d-flex" data-toggle="collapse" data-parent="#accordion" href="#collapseFalse7"
+							 ng-click="op7 = !op7">
+								<span class="glyphicon glyphicon-remove set-icon"></span>
+								<span class="uppercase set-text" data-translate="HELP_CENTER.SHOP_SET.SPAN8"></span>
+							</h4>
+							<i class="pull-right glyphicon set-icon-chevron" data-ng-class="op7 ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'">
+							</i>
+						</div>
+						<div id="collapseFalse7" class="panel-collapse collapse">
+							<div class="panel-body panel-body-set">
+								<ul class="dashed inner-set-list inner-set-list-red">
+									<li data-translate="HELP_CENTER.SHOP_SET.LI11"></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade bd-example-modal-lg modal-set-padding" id="shopAddres" tabindex="-1" role="dialog"
+				 aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog set-modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header set-modal-header">
+								<strong data-translate="HELP_CENTER.SHOP_SET.STRONG10"></strong>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body set-modal-body">
+								<a href="https://repository.googoodoo.com/user/u0/images/help-center/shopAddres.png" target="_blank">
+									<img class="set-modal-pic" src="../../../img/help-center/shopAddres.png" alt="shop address">
+								</a>
+							</div>
+							<div class="modal-footer set-modal-footer">
+								<span data-translate="HELP_CENTER.SHOP_SET.STRONG19"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- MAIL -->
+				<li class="set-margin-bottom" id="shop-mail">
+					<strong class="create-center-margin">7.</strong>
+					<strong data-translate="HELP_CENTER.SHOP_SET.STRONG11"></strong>
+					<i class="fa fa-question set-question-icon" data-toggle="modal" data-target="#emailAddres"></i><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN21"></span>
+					<strong data-translate="HELP_CENTER.SHOP_SET.STRONG12"></strong>
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN22"></span>
+				</li>
+				<div class="modal fade bd-example-modal-lg modal-set-padding" id="emailAddres" tabindex="-1" role="dialog"
+				 aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog set-modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header set-modal-header">
+								<strong data-translate="HELP_CENTER.SHOP_SET.STRONG11"></strong>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body set-modal-body">
+								<a href="https://repository.googoodoo.com/user/u0/images/help-center/emailAddres.png" target="_blank">
+									<img class="set-modal-pic" src="../../../img/help-center/emailAddres.png" alt="email address">
+								</a>
+							</div>
+							<div class="modal-footer set-modal-footer">
+								<span data-translate="HELP_CENTER.SHOP_SET.STRONG19"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- PHONE -->
+				<li id="shop-phone">
+					<strong class="create-center-margin">8.</strong>
+					<strong data-translate="HELP_CENTER.SHOP_SET.STRONG13"></strong>
+					<i class="fa fa-question set-question-icon" data-toggle="modal" data-target="#phoneNumber"></i><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN17"></span><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN23"></span><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN24"></span>
+					<strong data-translate="HELP_CENTER.SHOP_SET.STRONG14"></strong><br />
+				</li>
+				<div class="panel-group panel-group-set" id="accordion">
+					<div class="shop-set-panel panel-set hc-list-item">
+						<div class="panel-heading-set">
+							<h4 class="panel-title shop-set d-flex" data-toggle="collapse" data-parent="#accordion" href="#collapseTrue7"
+							 ng-click="op7 = !op7">
+								<span class="glyphicon glyphicon-ok set-icon"></span>
+								<span class="uppercase set-text" data-translate="HELP_CENTER.SHOP_SET.SPAN7"></span>
+							</h4>
+							<i class="pull-right glyphicon set-icon-chevron" data-ng-class="op7 ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'">
+							</i>
+						</div>
+						<div id="collapseTrue7" class="panel-collapse collapse">
+							<div class="panel-body panel-body-set">
+								<ul class="dashed inner-set-list">
+									<li data-translate="HELP_CENTER.SHOP_SET.LI12"></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="shop-set-panel-botton panel-set hc-list-item">
+						<div class="panel-heading-set panel-heading-set-red">
+							<h4 class="panel-title shop-set d-flex" data-toggle="collapse" data-parent="#accordion" href="#collapseFalse8"
+							 ng-click="op8 = !op8">
+								<span class="glyphicon glyphicon-remove set-icon"></span>
+								<span class="uppercase set-text" data-translate="HELP_CENTER.SHOP_SET.SPAN8"></span>
+							</h4>
+							<i class="pull-right glyphicon set-icon-chevron" data-ng-class="op8 ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'">
+							</i>
+						</div>
+						<div id="collapseFalse8" class="panel-collapse collapse">
+							<div class="panel-body panel-body-set">
+								<ul class="dashed inner-set-list inner-set-list-red">
+									<li data-translate="HELP_CENTER.SHOP_SET.LI13"></li>
+									<li data-translate="HELP_CENTER.SHOP_SET.LI14"></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal fade bd-example-modal-lg modal-set-padding" id="phoneNumber" tabindex="-1" role="dialog"
+				 aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog set-modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header set-modal-header">
+								<strong data-translate="HELP_CENTER.SHOP_SET.STRONG13"></strong>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body set-modal-body">
+								<a href="https://repository.googoodoo.com/user/u0/images/help-center/phoneAddres.png" target="_blank">
+									<img class="set-modal-pic" src="../../../img/help-center/phoneAddres.png" alt="phone address">
+								</a>
+							</div>
+							<div class="modal-footer set-modal-footer">
+								<span data-translate="HELP_CENTER.SHOP_SET.STRONG19"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- URL -->
+				<li class="set-margin-bottom" id="shop-url">
+					<strong class="create-center-margin">9.</strong>
+					<strong data-translate="HELP_CENTER.SHOP_SET.STRONG15"></strong>
+					<i class="fa fa-question set-question-icon" data-toggle="modal" data-target="#urlAddres"></i><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN25"></span><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN26"></span><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN27"></span>
+				</li>
+				<div class="modal fade bd-example-modal-lg modal-set-padding" id="urlAddres" tabindex="-1" role="dialog"
+				 aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog set-modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header set-modal-header">
+								<strong data-translate="HELP_CENTER.SHOP_SET.STRONG15"></strong>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body set-modal-body">
+								<a href="https://repository.googoodoo.com/user/u0/images/help-center/urlAddres.png" target="_blank">
+									<img class="set-modal-pic" src="../../../img/help-center/urlAddres.png" alt="url address">
+								</a>
+							</div>
+							<div class="modal-footer set-modal-footer">
+								<span data-translate="HELP_CENTER.SHOP_SET.STRONG19"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ANOTHER ADDRESS -->
+				<li id="shop-another-address">
+					<strong class="create-center-margin">10.</strong>
+					<strong data-translate="HELP_CENTER.SHOP_SET.STRONG16"></strong>
+					<i class="fa fa-question set-question-icon" data-toggle="modal" data-target="#newAddres"></i><br />
+					<span data-translate="HELP_CENTER.SHOP_SET.SPAN28"></span><br />
+					<div class="modal fade bd-example-modal-lg modal-set-padding" id="newAddres" tabindex="-1" role="dialog"
+					 aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog set-modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header set-modal-header">
+									<strong data-translate="HELP_CENTER.SHOP_SET.STRONG16"></strong>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body set-modal-body">
+									<a href="https://repository.googoodoo.com/user/u0/images/help-center/newAddres.png" target="_blank">
+										<img class="set-modal-pic" src="../../../img/help-center/newAddres.png" alt="new address">
+									</a>
+								</div>
+								<div class="modal-footer set-modal-footer">
+									<span data-translate="HELP_CENTER.SHOP_SET.STRONG19"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<ol class="set-margin-left">
+						<li>
+							<strong class="create-center-margin">1.</strong>
+							<strong data-translate="HELP_CENTER.SHOP_SET.STRONG17.STRONG1"></strong>
+							<i class="fa fa-question set-question-icon" data-toggle="modal" data-target="#newTitle"></i><br />
+							<span data-translate="HELP_CENTER.SHOP_SET.STRONG17.SPAN2"></span><br />
+							<span data-translate="HELP_CENTER.SHOP_SET.STRONG17.SPAN1"></span>
+						</li>
+						<div class="modal fade bd-example-modal-lg modal-set-padding" id="newTitle" tabindex="-1" role="dialog"
+						 aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog set-modal-lg" role="document">
+								<div class="modal-content">
+									<div class="modal-header set-modal-header">
+										<strong data-translate="HELP_CENTER.SHOP_SET.STRONG17.STRONG1"></strong>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body set-modal-body">
+										<a href="https://repository.googoodoo.com/user/u0/images/help-center/addTitle.png" target="_blank">
+											<img class="set-modal-pic" src="../../../img/help-center/addTitle.png" alt="add tittle">
+										</a>
+									</div>
+									<div class="modal-footer set-modal-footer">
+										<span data-translate="HELP_CENTER.SHOP_SET.STRONG19"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<li>
+							<strong class="create-center-margin">2.</strong>
+							<strong data-translate="HELP_CENTER.SHOP_SET.STRONG17.STRONG2"></strong>
+							<i class="fa fa-question set-question-icon" data-toggle="modal" data-target="#newCity"></i><br />
+							<span data-translate="HELP_CENTER.SHOP_SET.STRONG17.SPAN2"></span><br />
+							<span data-translate="HELP_CENTER.SHOP_SET.STRONG17.SPAN3"></span>
+							<strong data-translate="HELP_CENTER.SHOP_SET.STRONG17.STRONG5"></strong>
+						</li>
+						<div class="modal fade bd-example-modal-lg modal-set-padding" id="newCity" tabindex="-1" role="dialog"
+						 aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog set-modal-lg" role="document">
+								<div class="modal-content">
+									<div class="modal-header set-modal-header">
+										<strong data-translate="HELP_CENTER.SHOP_SET.STRONG17.STRONG2"></strong>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body set-modal-body">
+										<a href="https://repository.googoodoo.com/user/u0/images/help-center/addCity.png" target="_blank">
+											<img class="set-modal-pic" src="../../../img/help-center/addCity.png" alt="add city">
+										</a>
+									</div>
+									<div class="modal-footer set-modal-footer">
+										<span data-translate="HELP_CENTER.SHOP_SET.STRONG19"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<li>
+							<strong class="create-center-margin">3.</strong>
+							<strong data-translate="HELP_CENTER.SHOP_SET.STRONG17.STRONG3"></strong>
+							<i class="fa fa-question set-question-icon" data-toggle="modal" data-target="#addAddres"></i><br />
+							<span data-translate="HELP_CENTER.SHOP_SET.STRONG17.SPAN4"></span>
+						</li>
+						<div class="modal fade bd-example-modal-lg modal-set-padding" id="addAddres" tabindex="-1" role="dialog"
+						 aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog set-modal-lg" role="document">
+								<div class="modal-content">
+									<div class="modal-header set-modal-header">
+										<strong data-translate="HELP_CENTER.SHOP_SET.STRONG17.STRONG3"></strong>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body set-modal-body">
+										<a href="https://repository.googoodoo.com/user/u0/images/help-center/addAddres.png" target="_blank">
+											<img class="set-modal-pic" src="../../../img/help-center/addAddres.png" alt="another address">
+										</a>
+									</div>
+									<div class="modal-footer set-modal-footer">
+										<span data-translate="HELP_CENTER.SHOP_SET.STRONG19"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<li>
+							<strong class="create-center-margin">4.</strong>
+							<strong data-translate="HELP_CENTER.SHOP_SET.STRONG17.STRONG4"></strong>
+							<i class="fa fa-question set-question-icon" data-toggle="modal" data-target="#newPhone"></i><br />
+							<span data-translate="HELP_CENTER.SHOP_SET.STRONG17.SPAN2"></span><br />
+							<span data-translate="HELP_CENTER.SHOP_SET.STRONG17.SPAN5"></span>
+						</li>
+						<div class="panel-group panel-group-set" id="accordion">
+							<div class="shop-set-panel panel-set hc-list-item">
+								<div class="panel-heading-set">
+									<h4 class="panel-title shop-set d-flex" data-toggle="collapse" data-parent="#accordion" href="#collapseTrue9"
+									 ng-click="op9 = !op9">
+										<span class="glyphicon glyphicon-ok set-icon"></span>
+										<span class="uppercase set-text" data-translate="HELP_CENTER.SHOP_SET.SPAN7"></span>
+									</h4>
+									<i class="pull-right glyphicon set-icon-chevron" data-ng-class="op9 ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'">
+									</i>
+								</div>
+								<div id="collapseTrue9" class="panel-collapse collapse">
+									<div class="panel-body panel-body-set">
+										<ul class="dashed inner-set-list">
+											<li data-translate="HELP_CENTER.SHOP_SET.LI12"></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="shop-set-panel-botton panel-set hc-list-item">
+								<div class="panel-heading-set panel-heading-set-red">
+									<h4 class="panel-title shop-set d-flex" data-toggle="collapse" data-parent="#accordion" href="#collapseFalse10"
+									 ng-click="op8 = !op10">
+										<span class="glyphicon glyphicon-remove set-icon"></span>
+										<span class="uppercase set-text" data-translate="HELP_CENTER.SHOP_SET.SPAN8"></span>
+									</h4>
+									<i class="pull-right glyphicon set-icon-chevron" data-ng-class="op10 ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'">
+									</i>
+								</div>
+								<div id="collapseFalse10" class="panel-collapse collapse">
+									<div class="panel-body panel-body-set">
+										<ul class="dashed inner-set-list inner-set-list-red">
+											<li data-translate="HELP_CENTER.SHOP_SET.LI13"></li>
+											<li data-translate="HELP_CENTER.SHOP_SET.LI14"></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal fade bd-example-modal-lg modal-set-padding" id="newPhone" tabindex="-1" role="dialog"
+						 aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog set-modal-lg" role="document">
+								<div class="modal-content">
+									<div class="modal-header set-modal-header">
+										<strong data-translate="HELP_CENTER.SHOP_SET.STRONG17.STRONG4"></strong>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body set-modal-body">
+
+									</div>
+									<div class="modal-footer set-modal-footer">
+										<span data-translate="HELP_CENTER.SHOP_SET.STRONG19"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</ol>
+				</li>
+
+
+
+
+				</ol>
+	</div>
+	<script src="./ofAngular/main.js"></script>
+	<script src="./angular1.js"></script>
+</body>
+
+</html>

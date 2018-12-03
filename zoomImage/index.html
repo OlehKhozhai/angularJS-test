@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body ng-app="app" ng-controller="mainCtrl">
+
+
+
+<div class="img-zoom-container" ng-init="imageZoom()">
+  <img id="myimage" src="./../ww.jpg" width="300" height="240" ng-mouseenter="showResTrue()" ng-mouseleave="showResFalse()">
+</div>
+<div id="myresult" class="img-zoom-result" ng-show="showRess"></div>
+
+<script src="./../angular1.js"></script>
+<script src="./main.js"></script>
+
+</body>
+</html>

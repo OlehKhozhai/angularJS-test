@@ -1,3 +1,5 @@
+/* 
+
 input.b-0 {
     border: 0;
 }
@@ -50,7 +52,6 @@ select {
 }
 
 .chat-info::-webkit-scrollbar-track {
-    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
     border-radius: 30px;
     background-color: inherit;
 }
@@ -72,4 +73,108 @@ select {
 
 .content {
     display: flex;
+}
+
+/*  */
+
+html{
+    scroll-behavior: smooth;
+}
+
+.shadow{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(153, 224, 60);
+    position: fixed;
+    top: 0;
+}
+.shadow1{
+    height: 50px;
+    width: 100%;
+}
+
+.help-center-margin {
+  margin-bottom: 28px;
+  list-style: none;
+}
+
+ul.dashed {
+  list-style-type: none;
+}
+ol.dashed {
+  margin-left: 25px;
+}
+
+ol.dashed>li {
+  padding: 0;
+}
+
+ul.dashed>li {
+  text-indent: 0;
+}
+
+ul.dashed>li:before {
+  content: "—";
+  margin-right: 15px;
+}
+
+.paragraph-caret {
+  white-space: pre-line;
+}
+
+.create-center-margin {
+  margin-right: 10px;
+}
+
+.help-center-shop-set{
+  list-style-position: inside;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.help-center-shop-set>li>a{
+  padding-left: 10px;
+  color: #d4652c;
+}
+
+.help-center-shop-set li:last-child a:last-child{
+  padding-left: 0;
+}
+
+.help-center-shop-set>li{
+  color: #d4652c;
+  margin-bottom: 4px;
+}
+
+goods-header {
+  margin-top: 22px;
+}
+
+.help-center-shop-set-nav{
+  margin-bottom: 15px;
+  margin-top: -26px;
+}
+
+.help-center-shop-set-p{
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 21px;
+}
+
+.scrolling-box {
+  scroll-behavior: smooth;
+}
+
+
+
+.scrollup {
+    background: #d4652c no-repeat scroll 0 0;
+    bottom: 50px;
+    height: 65px;
+    position: fixed;
+    right: 15px;
+    text-indent: -9999px;
+    width: 65px;
+    display:none;
 }

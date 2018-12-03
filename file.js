@@ -3,6 +3,11 @@ angular.module('app',[]).controller('FileImportController', FileImportController
 FileImportController.$inject = ["$scope"];
 
 function FileImportController($scope) {
+
+    $scope.nyFunck = function(){
+      return Math.random();
+    }
+    $scope.myVar= './foto.jpg'
   var ctrl = this;
 
   ctrl.goodFields = [

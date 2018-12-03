@@ -1,0 +1,27 @@
+body {
+    padding-top: 50px;
+  }
+  html{
+    scroll-behavior:smooth;
+  }
+  
+  .anchor {
+    border: 2px dashed DarkOrchid;
+    padding: 10px 10px 200px 10px;
+  }
+  
+  .fixed-header {
+    background-color:royalblue;
+    height: 50px;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+  }
+  
+  .fixed-header > a {
+    display: inline-block;
+    margin: 5px 15px;
+  }
+  .fixed-header>ul{
+      display: flex;
+      justify-content: space-around;
+  }
